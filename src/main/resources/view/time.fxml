@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TimeStart">
+   <children>
+      <TableView fx:id="timeTable" layoutX="8.0" layoutY="158.0" prefHeight="441.0" prefWidth="617.0">
+        <columns>
+          <TableColumn fx:id="columnI" prefWidth="26.0" text="i" />
+          <TableColumn fx:id="columnDistanceToI" prefWidth="128.0" text="Расстояние в метрах" />
+            <TableColumn fx:id="columnDistanceCalibration" prefWidth="145.0" sortType="DESCENDING" text="Тарировочный метр" />
+            <TableColumn fx:id="columnTimeToI" prefWidth="164.0" text="Время от точки до точки" />
+            <TableColumn fx:id="columnTimeInI" prefWidth="151.0" sortType="DESCENDING" text="Время с учетом старта" />
+        </columns>
+      </TableView>
+      <TextField fx:id="fieldDistance" layoutX="176.0" layoutY="10.0" promptText="На пример: 29" />
+      <TextField fx:id="fieldTime" layoutX="176.0" layoutY="40.0" promptText="На пример: 36" />
+      <TextField fx:id="fieldStartTime" layoutX="614.0" layoutY="10.0" promptText="На пример: 14:35:00" />
+      <TextField fx:id="fieldCalibration" layoutX="614.0" layoutY="48.0" promptText="На пример: 103" />
+      <Text layoutX="18.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Растояние, L (км)" />
+      <Text layoutX="18.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Время, t (мин)" />
+      <Text layoutX="477.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Время start, t (ч/мин)" />
+      <Text layoutX="477.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тарировочный 1 км (м)" wrappingWidth="129.07910237461329" />
+      <Text layoutX="18.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Средняя скорость, V (км/час)" />
+      <TextField fx:id="fieldAverageSpeed" layoutX="176.0" layoutY="77.0" promptText="На пример: 35.08" />
+      <Button fx:id="btnStart" layoutX="18.0" layoutY="115.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="147.0" text="СТАРТ" />
+      <Button fx:id="btnStation" layoutX="482.0" layoutY="89.0" mnemonicParsing="false" text="Добавить точку" />
+      <Button fx:id="btnClear" layoutX="196.0" layoutY="119.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="85.0" text="Очистить" />
+      <TextField fx:id="fieldStation" layoutX="614.0" layoutY="89.0" promptText="На пример: 860 м" />
+      <ImageView fitHeight="124.0" fitWidth="138.0" layoutX="327.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
